@@ -1,0 +1,395 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: #f0f9ff;
+  padding: 2rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #0c4a6e;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #0369a1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.controlsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.controlPanel {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #bae6fd;
+}
+
+.controlPanel h3 {
+  font-size: 1.1rem;
+  color: #0c4a6e;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.dateControls {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.dateGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.dateGroup label {
+  font-size: 0.9rem;
+  color: #0369a1;
+  font-weight: 500;
+}
+
+.dateInput {
+  padding: 0.75rem;
+  border: 1px solid #bae6fd;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: border-color 0.2s ease;
+}
+
+.dateInput:focus {
+  outline: none;
+  border-color: #0ea5e9;
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+}
+
+.regionSelect {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #bae6fd;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  background: white;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.regionSelect:focus {
+  outline: none;
+  border-color: #0ea5e9;
+}
+
+.coordinates {
+  font-size: 0.85rem;
+  color: #0369a1;
+  margin-top: 0.5rem;
+  font-family: monospace;
+}
+
+.analyzeButton,
+.exportButton {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 0.5rem;
+}
+
+.analyzeButton {
+  background: #0369a1;
+  color: white;
+}
+
+.analyzeButton:hover:not(:disabled) {
+  background: #0c4a6e;
+  transform: translateY(-1px);
+}
+
+.analyzeButton:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+.exportButton {
+  background: #0891b2;
+  color: white;
+}
+
+.exportButton:hover {
+  background: #0e7490;
+  transform: translateY(-1px);
+}
+
+.comparisonSection {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #bae6fd;
+}
+
+.comparisonSection h3 {
+  color: #0c4a6e;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.comparison {
+  width: 100%;
+  height: 400px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.comparisonLabels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #0369a1;
+  font-weight: 500;
+}
+
+.resultsSection {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #bae6fd;
+}
+
+.resultsSection h3 {
+  color: #0c4a6e;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.resultsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.resultCard {
+  background: #f0f9ff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #bae6fd;
+}
+
+.resultValue {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #0c4a6e;
+  margin-bottom: 0.5rem;
+}
+
+.resultLabel {
+  font-size: 0.9rem;
+  color: #0369a1;
+  font-weight: 500;
+}
+
+.riskAssessment {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.riskCard {
+  background: #f8fafc;
+  padding: 1rem;
+  border-radius: 6px;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+}
+
+.riskIndicator {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.riskIndicator.high {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.riskIndicator.medium {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.riskIndicator.low {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.trendIndicator {
+  text-align: center;
+  padding: 1rem;
+  background: #f0f9ff;
+  border-radius: 6px;
+}
+
+.trend {
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.trend.declining {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.trend.increasing {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.trend.stable {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.mapSection {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #bae6fd;
+}
+
+.mapSection h3 {
+  color: #0c4a6e;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.infoSection {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #bae6fd;
+}
+
+.infoCard h4 {
+  color: #0c4a6e;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.infoCard h5 {
+  color: #0369a1;
+  margin: 1.5rem 0 1rem 0;
+  font-weight: 600;
+}
+
+.infoCard p {
+  color: #0369a1;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.infoCard ul {
+  color: #0369a1;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.infoCard li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.interpretationGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.interpretationItem {
+  background: #f0f9ff;
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid #bae6fd;
+  font-size: 0.9rem;
+  color: #0369a1;
+}
+
+.interpretationItem strong {
+  color: #0c4a6e;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .controlsGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .dateControls {
+    gap: 0.75rem;
+  }
+
+  .resultsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+
+  .resultValue {
+    font-size: 1.4rem;
+  }
+
+  .comparison {
+    height: 300px;
+  }
+
+  .riskAssessment {
+    grid-template-columns: 1fr;
+  }
+
+  .interpretationGrid {
+    grid-template-columns: 1fr;
+  }
+}
