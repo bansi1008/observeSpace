@@ -41,7 +41,7 @@ export default function CompareMap() {
   const [layer, setLayer] = useState("7-NDWI");
   const [mapCenter, setMapCenter] = useState({ lat: 54.5, lng: -3.5 });
   const [bbox, setBbox] = useState(
-    "-1300000,6800000,-1100000,7000000" // initial bbox around Newcastle
+    "-1300000,6800000,-1100000,7000000" 
   );
 
   const onMapClick = useCallback((event) => {
@@ -50,7 +50,7 @@ export default function CompareMap() {
 
     setMapCenter({ lat, lng });
 
-    // Convert to Mercator meters and create new bbox (20km x 20km box)
+ 
     const merc = latLngToMercator(lat, lng);
     const newBbox = createBbox(merc, 20000);
 
@@ -58,7 +58,7 @@ export default function CompareMap() {
   }, []);
 
   const getMapUrl = (date) => {
-    // Smaller bbox around Newcastle (EPSG:3857 meters)
+   
 
     return `https://services.sentinel-hub.com/ogc/wms/${instanceId}?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=${layer}&FORMAT=image/png&CRS=EPSG:3857&WIDTH=512&HEIGHT=512&BBOX=${bbox}&TIME=${date}`;
   };
@@ -119,7 +119,7 @@ export default function CompareMap() {
           center={mapCenter}
           zoom={8}
           mapTypeId="roadmap"
-          onClick={onMapClick} // shows city names, roads, labels
+          onClick={onMapClick} 
         />
       </LoadScript>
     </div>
