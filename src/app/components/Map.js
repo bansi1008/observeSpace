@@ -14,7 +14,7 @@ const center = {
   lng: -3.5,
 };
 
-const instanceId = "e6f303d3-5f1b-4ea7-912e-6f86c0df3666"; // Replace with your Sentinel Hub config ID
+const instanceId = "e6f303d3-5f1b-4ea7-912e-6f86c0df3666"; 
 
 export default function Map() {
   const [map, setMap] = useState(null);
@@ -43,7 +43,7 @@ export default function Map() {
             }),
           };
 
-          // Convert lat/lng to EPSG:3857 meters
+         
           const latLngToMercator = (lat, lng) => {
             const x = (lng * 20037508.34) / 180;
             let y =
@@ -62,7 +62,7 @@ export default function Map() {
             tileBounds.south.lng()
           );
 
-          // Correct order: minX, minY, maxX, maxY
+          
           const bbox = [nw.x, se.y, se.x, nw.y].join(",");
 
           return `https://services.sentinel-hub.com/ogc/wms/${instanceId}?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=${layer}&FORMAT=image/png&CRS=EPSG:3857&WIDTH=512&HEIGHT=512&BBOX=${bbox}&TIME=${date}`;
