@@ -18,7 +18,7 @@ const mapCenter = {
   lng: -62.2159, // Amazon rainforest
 };
 
-const instanceId = "e6f303d3-5f1b-4ea7-912e-6f86c0df3666";
+const instanceId = "bfcaa3bf-5335-4f2e-b704-68a535704a9e";
 
 // Predefined regions of interest
 const presetRegions = [
