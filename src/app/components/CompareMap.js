@@ -17,7 +17,7 @@ const mapCenter = {
   lng: -3.5,
 };
 
-const instanceId = "e6f303d3-5f1b-4ea7-912e-6f86c0df3666";
+const instanceId = "bfcaa3bf-5335-4f2e-b704-68a535704a9e";
 function latLngToMercator(lat, lng) {
   const x = (lng * 20037508.34) / 180;
   let y = Math.log(Math.tan(((90 + lat) * Math.PI) / 360)) / (Math.PI / 180);
